@@ -3,31 +3,38 @@
 
 ## How To Install
 
-1. From 'Software Center' install 'Visual Studio Code'.
+1. From 'Software Center' install 'Visual Studio Code' and 'Python 3.7'
+### Note: if 'Python 3.7' install fails, try any other Python version 3.7+ from 'Software Center'.
 
-![Alt text](images/screenshot1.PNG?raw=true)
-#
-2. From 'Software Center' install 'Python 3.8.10'.
 
-![Alt text](images/screenshot2.PNG?raw=true)
-
-### Note: if 'Python 3.8.10' install fails, try any other Python version 3.+ from 'Software Center'.
-#
-3. Open a CMD and paste the below one-liner command to download this repo, the dependencies and install them, then finally verify install as self check.
+2. Open a Powershell prompt and install git and python dependency.
+- git
+```code
+winget install --id Git.Git -e --source winget
 ```
-git clone https://stash.merck.com/scm/splnk/splunk-tools.git && git clone https://stash.merck.com/scm/splnk/paramiko-jump.git && cd .\paramiko-jump\ && python .\setup.py install && cd ../spluk-tools/inhouse-ansible/ && python ./inhouse-ansible.py --version
+- python
+```code
+python -m pip install paramiko
 ```
+
+
+3. Open a CMD and clone this repository and check everything is installed.
+```
+git clone https://stash.merck.com/scm/splnk/llama.git && cd .\llama\ && python .\llama.py
+```
+
+4. (optional) All commands -> 1 liner -> PowerShell
+```
+winget install --id Git.Git -e --source winget && python -m pip install paramiko && git clone https://stash.merck.com/scm/splnk/llama.git && cd .\llama\ && python .\llama.py
+```
+
 #
 ## TODO
-- better error handling
 - add scp support
 - add multi-threading
 - add playbook support
-- add logging on host + on target via " > llama.log"
 - create Splunk dashboard
-
-winget install --id Git.Git -e --source winget
 
 ## Known Issues
 #
-"Secsh channel 0 open FAILED: Connection refused: Connect failed" debug info pops up without Debug flag enabled.
+ - "Secsh channel 0 open FAILED: Connection refused: Connect failed" debug info pops up without Debug flag enabled.
