@@ -19,8 +19,15 @@ git clone https://stash.merck.com/scm/splnk/splunk-tools.git && git clone https:
 ```
 #
 ## TODO
-- error handling
+- better error handling
+- add scp support
 - add multi-threading
 - add playbook support
 - add logging on host + on target via " > llama.log"
 - create Splunk dashboard
+
+winget install --id Git.Git -e --source winget
+
+## Known Issues
+#
+"Secsh channel 0 open FAILED: Connection refused: Connect failed" debug info pops up without Debug flag enabled.
