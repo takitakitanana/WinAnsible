@@ -54,14 +54,14 @@ if len(argv) > 1: #pass gate
     if debug: log('pass len(argv) > 1') #pass gate
     if len(argv) > max_argv: #pass gate
         if debug: log('panic len(argv) > ' + str(max_argv))
-        print('Too many arguemnts.\nExample: python .\llama.py phantom "ls -la | grep bashrc"\nBye.\n')
+        print('Too many arguemnts.\nExample: python .\llama.py syslog "ls -la | grep bashrc"\nBye.\n')
         exit()
     else:
         task.target = argv[1]
         if debug: log('pass argv length check, adding argv[1] to task.target')
 else:
     if debug: log(red('panic no argv[1]'))
-    print('\nNo target provided.\nExample: python .\llama.py phantom "ls -la | grep bashrc"\nBye.\n')
+    print('\nNo target provided.\nExample: python .\llama.py syslog "ls -la | grep bashrc"\nBye.\n')
     exit()
 
 #ssh 

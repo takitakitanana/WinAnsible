@@ -1,4 +1,4 @@
-###  llama.py v1.0.0 ![Alt text](images/llama.PNG?raw=true) --Splunk and Phantom Server Automation Framework-- 
+###  llama.py v2.3.0 --Splunk and Phantom Server Automation Framework-- 
 #
 ## How To Use
 - From the same directory
@@ -9,10 +9,43 @@ Example
 ```code
 python llama.py all pwd
 ```
-Target is selected from inventory row number
+![Alt text](images/screenshot1.PNG?raw=true)
+
+#
+- cut screenshot to end
+#
+
+![Alt text](images/screenshot4.PNG?raw=true)
+#
+Target is selected from inventory.py, starting from 0 -> row number 2.
+
 ```code
 <TARGET>
 ```
+state is a list of lists.
+
+ - row 0 = index number
+ - row 1 = hostname
+ - row 2 = group
+ - row 3 = jump server check (True/False)
+ - row 4 = jump server username
+ - row 5 = jump server password
+ - row 6 = jump server
+ - row 7 = jump server port
+ - row 8 = target server username
+ - row 9 = target server password
+ - row 10 = target server
+ - row 11 = target server port
+
+![Alt text](images/screenshot5.PNG?raw=true)
+
+#
+If the command has multiple words it needs to be put in quotes "cmd"
+```code
+<CMD>
+```
+
+![Alt text](images/screenshot6.PNG?raw=true)
 
 #
 ## How To Install
