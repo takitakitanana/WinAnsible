@@ -3,8 +3,19 @@
 ## How To Use
 - From the same directory
 ```code
-python llama.py <TARGET> <CMD>
+python llama.py <target-Group> <cmd>
 ```
+ - Known targets groups:
+    - all
+        - all servers from inventory.state
+    - test
+        - one server from each region(syslog), one server from aws on-prem, one server from phantom 
+    - syslog
+        - all splunk syslog servers from inventory.state
+    - aws-prem
+        - all splunk servers hosted on aws on-prem
+    - phantom
+        - all phantom servers
 Example
 ```code
 python llama.py all pwd
@@ -20,7 +31,7 @@ python llama.py all pwd
 Target is selected from inventory.py, starting from 0 -> row number 2.
 
 ```code
-<TARGET>
+<target-group>
 ```
 state is a list of lists.
 
